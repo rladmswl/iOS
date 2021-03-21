@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func refresh(_ sender: Any) {
-        let message = "가격은 ₩\(currentValue) 입니다."
+        let message = "가격은 \(currentValue) 입니다."
         let alert = UIAlertController(title: "refresh", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
