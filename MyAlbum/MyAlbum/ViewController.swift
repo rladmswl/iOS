@@ -21,11 +21,13 @@ class ViewController: UIViewController {
     @IBAction func refresh(_ sender: Any) {
         let message = "가격은 \(currentValue) 입니다."
         let alert = UIAlertController(title: "refresh", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: "OK", style: .default, handler: { action in self.refresh()
+            
+        })
         alert.addAction(action)
         present(alert, animated: true, completion: nil) // 팝업을 띄우는 코드.
         
-        refresh()
+        //refresh()
     }
     
     func refresh() {
